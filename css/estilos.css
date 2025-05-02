@@ -15,6 +15,14 @@
     font-family: 'Oxanium', sans-serif;
 }
 
+body {
+    position: relative;
+    color: var(--color-text);
+    font-family: 'Oxanium', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 10%;
+}
+
 h1, h2, h3, h4, h5, h6, p, input, textarea, ul, a {
     margin: 0;
     padding: 0;
@@ -55,6 +63,8 @@ header .contenedor-header {
 }
 
 /* Estilos para el main */
+
+
 
 .main-cards {
     display: flex;
@@ -133,4 +143,17 @@ header .contenedor-header {
     margin-top: 15px;
     background-color: var(--color-primary);
     align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.social-media a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+.social-media a img:hover {
+    transform: rotateZ(90deg);
+    transition: all 0.5s ease;
 }
