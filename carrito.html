@@ -27,7 +27,24 @@
         </div>
     </header>
     <main>
-        <h1>Este sera el main del carrito.</h1>
+        <div id="main-card">
+            <h2>Carrito de compras.</h2>
+            <div id="cart-grid" class="cart-grid">
+                <!-- Productos que se cargan por javascript -->
+            </div>
+        </div>
+        <div class="total-price">
+            <h3>Total: $<span id="total-price">0</span></h3>
+            <button id="checkout-button">Finalizar compra</button>
+        </div>
+        <div class="empty-cart">
+            <h3 id="empty-cart-message">El carrito está vacío.</h3>
+            <p>Agrega productos a tu carrito para ver el total.</p>
+        </div>
+        <div class="checkout-message">
+            <h3 id="checkout-message">Gracias por tu compra!</h3>
+            <p>Tu pedido ha sido procesado con éxito.</p>
+        </div>
     </main>
     <footer>
         <div class="footer-container">
