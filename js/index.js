@@ -153,6 +153,79 @@
         });
     }
 
+
+    /* Utilizacion de javascript para hacer interactiva la pagina de contacto. */
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("form-contacto");
+    
+        const nombreInput = document.getElementById("nombre");
+        const emailInput = document.getElementById("email");
+        const asuntoInput = document.getElementById("asunto");
+        const mensajeInput = document.getElementById("mensaje");
+        const sugerenciasMensaje = document.getElementById("sugerencias-mensaje");
+    
+        // Sugerencias predefinidas para el campo "asunto"
+        const sugerenciasAsunto = [
+            "Consulta sobre productos",
+            "Problema con mi pedido",
+            "Reclamo o devolución",
+            "Solicitud de contacto",
+            "Otro motivo"
+        ];
+    
+        // Autocompletado básico para "asunto"
+        asuntoInput.addEventListener("input", () => {
+            const valor = asuntoInput.value.toLowerCase();
+            const sugerencia = sugerenciasAsunto.find(s => s.toLowerCase().startsWith(valor));
+            if (sugerencia && valor.length > 1) {
+                asuntoInput.value = sugerencia;
+            }
+        });
+    
+        // Sugerencias en vivo para "mensaje"
+        mensajeInput.addEventListener("input", () => {
+            const texto = mensajeInput.value.toLowerCase();
+            let sugerencia = "";
+    
+            if (texto.includes("hola") && !texto.includes("buen")) {
+                sugerencia = "¿Querías decir: 'Hola, buenos días. Me gustaría...'?";
+            } else if (texto.includes("precio")) {
+                sugerencia = "¿Querías consultar sobre el precio de un producto?";
+            } else if (texto.length > 100) {
+                sugerencia = "Tu mensaje es muy claro, ¡podés enviarlo!";
+            } else {
+                sugerencia = "";
+            }
+    
+            sugerenciasMensaje.textContent = sugerencia;
+        });
+    
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+    
+            const nombre = nombreInput.value.trim();
+            const email = emailInput.value.trim();
+            const asunto = asuntoInput.value.trim();
+            const mensaje = mensajeInput.value.trim();
+    
+            if (!nombre || !email || !mensaje) {
+                alert("Por favor completá todos los campos obligatorios.");
+                return;
+            }
+    
+            console.log("Formulario enviado:");
+            console.log("Nombre:", nombre);
+            console.log("Email:", email);
+            console.log("Asunto:", asunto);
+            console.log("Mensaje:", mensaje);
+    
+            alert("Gracias por tu mensaje. Pronto nos pondremos en contacto.");
+            form.reset();
+            sugerenciasMensaje.textContent = "";
+        });
+    });
+
     // Inicializamos según página
     cargarProductos();
     mostrarCarrito();

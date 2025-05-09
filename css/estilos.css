@@ -241,3 +241,65 @@ header .contenedor-header {
     font-size: 1.2rem;
     display: none;
 }
+
+
+/* estilos para la pagina de contacto */
+
+.contacto-main {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contacto-main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contacto label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 1em;
+    resize: none;
+}
+
+.form-contacto button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contacto button:hover {
+    background-color: var(--color-tertiary);
+}
+
+.sugerencia-texto {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: var(--color-tertiary);
+    font-style: italic;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="media/telephone-outbound-fill.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="media/logo.png" alt="Logo kiosco" />
+            </div>
+            <div class="container">
+                <h1>El kiosco virtual</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><img src="media/play-fill.svg" alt="inicio">Inicio</a></li>
+                        <li><a href="carrito.html"><img src="media/cart3.svg" alt="carrito">Carrito <span
+                                    class="cantidad-carrito">0</span></a></li>
+                        <li><a href="#about"><img src="media/file-person.svg" alt="about us">Sobre nosotros</a></li>            
+                        <li><a href="contacto.html"><img src="media/telephone-outbound-fill.svg"
+                                    alt="contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="contacto-main">
+        <h2>Contacto</h2>
+        <form class="form-contacto" id="form-contacto">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required />
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <small id="sugerencias-mensaje" class="sugerencia-texto"></small>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2023 E-commerce. Todos los derechos reservados.</p>
+                <ul>
+                    <li><a href="#privacy">Política de Privacidad</a></li>
+                    <li><a href="#terms">Términos de Servicio</a></li>
+                    <li><a href="#contact">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <a href="http://www.facebook.com"><img src="media/facebook.svg" alt="Facebook" /></a>
+                <a href="http://x.com"><img src="media/twitter-x.svg" alt="Twitter" /></a>
+                <a href="http://instagram.com"><img src="media/instagram.svg" alt="Instagram" /></a>
+                <a href="https://wa.me/1234567890?text=Hola%2C%20estoy%20interesado%20en..."><img src="media/whatsapp.svg" alt="WhatsApp" /></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+</body>
+
+</html>
