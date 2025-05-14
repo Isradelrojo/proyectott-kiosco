@@ -48,6 +48,10 @@ header .contenedor-header .logo img {
     height: 25vh;
 }
 
+.abrir-menu {
+    display: none;
+}
+
 nav ul li a img {
     margin-right: .5rem;
 }
@@ -62,6 +66,10 @@ header .contenedor-header {
     align-items: center;
     padding: 20px;
     background-color: var(--color-primary);
+}
+
+.cerrar {
+    display: none;
 }
 
 /* Estilos para el main */
@@ -358,4 +366,78 @@ header .contenedor-header {
 
 iframe {
     border-radius: 10px;
+}
+
+
+
+
+/* media querys para responsive telefonos y tablets. */
+
+@media screen and (max-width: 581px){
+
+    .contenedor-header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .abrir-menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: auto;
+        margin: 0 3rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }
+
+    h1 {
+        margin: 0 1rem;
+    }
+
+    .visible {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+    
+    .container h1 {
+        margin: 0 2rem;
+    } 
+    
+    .cerrar {
+        display: block;
+        width: 25%;
+    }
+
+    .cerrar img {
+        width: 60%;
+
+    }
+    /* header .contenedor-header .logo img {
+        border-radius: 8%;
+        width: 25vw;
+        height: 25vh;
+    }
+    
+    nav ul li a img {
+        margin-right: .5rem;
+    }
+    
+    .container h1 {
+        font-size: 3rem;
+    }
+    
+    header .contenedor-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--color-primary);
+    } */
+    
 }

@@ -226,6 +226,21 @@
         });
     });
 
+    /* Vamos a cargar las funciones de los botones de cerrar y abrir del hamburguesa.*/
+    const boton_abrir = document.querySelector("#abrir")
+    const boton_cerrar = document.querySelector("#cerrar")
+    const nav = document.querySelector("#nav-list")
+    
+    boton_abrir.addEventListener("click", ()=>{
+        nav.classList.add("visible");
+        boton_abrir.classList.add("hidden")
+    })
+
+    boton_cerrar.addEventListener("click", ()=>{
+        nav.classList.remove("visible")
+        boton_abrir.classList.remove("hidden")
+    })
+
     // Inicializamos según página
     cargarProductos();
     mostrarCarrito();
