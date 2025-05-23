@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 
 :root {
-    --color-primary: #3498db;
-    --color-secondary: #2ecc71;
-    --color-tertiary: #e74c3c;
-    --color-background: #3b707e;
+    --color-primary: #f90a0a ;
+    --color-secondary: #ee8317;
+    --color-tertiary: #ee8317;
+    --color-background: #DAF7A6;
     --color-text: #2c3e50;
 }
 
